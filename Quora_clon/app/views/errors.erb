@@ -1,0 +1,12 @@
+<% if @new_answer %>
+<p><%= @new_answer.errors.full_messages.join %></p>
+<a href='/question/<%= @question.id %>'>Back to question</a>
+
+<% end %>
+
+<% if @new_question %>
+<p><%= @new_question.errors.full_messages.join %></p>
+<a href='/users_home/<%= @user.id %>'>User home</a>
+<% end %>
+
+

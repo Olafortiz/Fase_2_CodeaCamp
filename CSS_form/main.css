@@ -1,0 +1,121 @@
+.container {
+  margin: 0 auto; 
+  width: 768px;
+}
+
+.content {
+  margin: 5%;
+}
+
+form {
+  background-color: rgba(207, 207, 207, 1);
+  margin-top: 50px;
+   border: 2px rgba(207, 207, 207, 1);
+  border-radius: 4px;
+  
+
+}
+
+input[id=registration_name] {
+  font-size: 20px;
+  width: 40%;
+  -moz-box-shadow: 
+  inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+  padding: 5px;
+  margin-top: 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin-left: 5%;
+  margin-right: 7%;
+
+}
+
+input[id=registration_email] {
+  font-size: 20px;
+  width: 40%;
+  -moz-box-shadow: 
+  inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin-top: 20px;
+
+}
+input[id=comments] {
+  font-size: 20px;
+  top: 100%;
+  text-transform: top;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 90%;
+  margin: 5%;
+  margin-top: 5%;
+  text-align: top;
+  padding: 0 5px 200px;
+}
+
+input[id=phone] {
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 90%;
+  margin: 5%;
+  margin-top: 0%;
+  padding: 0 5px 20px;
+
+}
+
+input[id=registration_btn]{
+  font-size: 25px;
+    width: 92%;
+    background-color: rgba(0, 164, 219, 1);
+    border: none;
+    color: white;
+    -moz-box-shadow: 10px 10px 5px white;
+    padding: 12px 6px;
+    text-decoration: none;
+    margin: 5%;
+    margin-top: 0%;
+    border: 2px rgba(0, 164, 219, 1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+a {
+  background-color: #999;
+  color: white;
+  display: block;
+  width: 182px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.footer {
+  clear: both;
+  position: absolute;
+  padding: 20px 0;
+}

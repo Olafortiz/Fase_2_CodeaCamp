@@ -1,0 +1,41 @@
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #A9A9A9;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+
+div strong {
+  padding-top: 20px;
+  display: block;
+  margin-top: 25px;
+}

@@ -1,0 +1,11 @@
+<% if @post %>
+  <p><%= @post.title %></p>
+  <p><%= @post.body %></p>
+  <p><%= @post.author %></p>
+  <p><%= @post.updated_at %></p>
+  <% else %>
+  <p> Post doesn't exist </p>
+<% end %>
+
+<a href='/'>home</a>
+<a href='/posts'>all posts</a>

@@ -1,0 +1,27 @@
+<a href='/'>home</a>
+
+<form action="/search_entry" method="post">
+  <p>Search post by title</p>
+  <input type="text" name="title">
+  <input type="submit" value="Search">
+  <br>
+</form>
+
+<form action="/delete_entry" method="post">
+  <p>Delete post by title</p>
+  <input type="text" name="title">
+  <input type="submit" value="Delete">
+  <br>
+</form>
+
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+<p>Title: <%= post.title %></p>
+<p>Body: <%= post.body %></p>
+<p>Author: <%= post.author %></p>
+<p> Tags:<p>
+<% post.tags.each do |tag|%>
+ <li><%= tag.tag %></li>
+<% end %>
+<p><%= post.updated_at %></p>
+<% end %>

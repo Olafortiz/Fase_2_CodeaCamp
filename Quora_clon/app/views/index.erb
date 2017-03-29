@@ -1,0 +1,31 @@
+<h1> WELCOME TO QUORA </h1>
+<br>
+<h2>These are our current questions:</h2>
+<br>
+<% if @questions.empty? %>
+  <p> No questions yet </p>
+<% else %>
+  <% @questions.each do |question| %>
+  <p>Question:</p>
+  <p id='text'><%= question.body %></p>
+  <p>Author: <%=  User.find(question.user_id).name %></p>
+  <p><%= question.updated_at.strftime("%d %b %y")   %></p>
+  <br>
+    <% if @user %>
+    <a href='/question/<%= question.id %>'>Answer this question</a>
+    <p></p>
+    <p></p>
+    <p></p>
+    <% end %>
+  <% end %>
+<% end %>
+<br>
+<br>
+<% if @user %>
+<a href='/users_home/<%= @user.id %>'>User home</a>
+<br>
+<% end %>
+<a href="/log_in">Log in</a>
+<br>
+<a href="/new_user">Sign in</a>
+  

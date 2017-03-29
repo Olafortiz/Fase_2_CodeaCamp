@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css remueve las diferenecia que hay entre browsers segun los defaults de css predeterminados que utilizan. 
+    Revisa: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="normalize.css">
+  <!--
+    application.css este es el archivo donde van tus estilos, tu css
+  -->
+  <link rel="stylesheet" href="application.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="application.js"></script>
+</head>
+
+<body>
+  <div class="content">
+   <form name="sign_up" action="">
+      Email:
+      <input id="email" type="text" name="email" >
+      
+      Password:
+      <input id="password" type="text" name="password" >
+    
+      <input id="submit" type="submit" value="Sing up">
+    </form> 
+
+    <div id="result">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

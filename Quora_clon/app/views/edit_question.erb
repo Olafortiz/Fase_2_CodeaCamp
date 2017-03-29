@@ -1,0 +1,11 @@
+<h2>Edit your question!</h2>
+
+<div class="centered">
+  <form id = "question_form" action = "/question/<%= @question.id %>/update" method = "post">
+    <input type="hidden" name="question_id" value="<%= @question.id %>">
+    <label for = "body">Body:</label>
+    <input type = "text" name = "body" id = "title" placeholder = "Introduce your question" class = "input" value="<%= @question.body %>" required>
+    <br><br>
+      <input type = "submit" value = "Update!">
+  </form>
+</div>

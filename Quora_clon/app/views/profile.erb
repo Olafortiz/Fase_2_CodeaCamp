@@ -1,0 +1,44 @@
+<h1>"Welcome, <%=@user.name%>!"</h1>
+<br>
+<% if @user.questions.empty? %>
+<p> You have no questions yet </p>
+<% else %>
+<p id="label">Your questions: <p>
+  <% @user.questions.each do |question| %>
+  <p><%= question.body %></p>
+<input type="hidden" name="question_id" value="<%= question.id %>">
+<a href='/question/<%= question.id %>'>Go to this question</a>
+<a href="/question/<%= question.id %>/update">Edit this question</a>
+<a href="/question/delete/<%= question.id %>">Delete Question</a>
+<br>
+<br>
+<% end %>
+<% end %>
+<br>
+<br>
+<br>
+<% if @user.answers.empty? %>
+<p> You have no answers yet </p>
+<% else %>
+<p id="label">Your answers: <p>
+  <% @user.answers.each do |answer| %>
+  <%= answer.answer_body %>
+  <br>
+  <a href='/question/<%= answer.question_id %>'>Go to this question</a>
+  <br>
+<input type="hidden" name="answer_id" value="<%= answer.id %>">
+<% end %>
+<% end %>
+<br>
+<br>
+<br>
+
+
+<a href="/questions/new">Write a new question</a>
+<br>
+<a href="/log_out">log_out</a>
+<br>
+<a href="/">Home</a>
+
+
+  

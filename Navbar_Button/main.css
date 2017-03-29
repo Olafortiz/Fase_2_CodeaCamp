@@ -1,0 +1,73 @@
+.container {
+  margin: 0 auto;
+  width: 720px;
+  padding:  : 10%;
+  margin-top: 10px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+ul{
+  margin: 10px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #A9A9A9;
+  opacity: 0.6;
+  background: red;
+    background: -webkit-linear-gradient(white, gray);
+    background: -o-linear-gradient(white, gray);
+    background: -moz-linear-gradient(white, gray);
+    background: linear-gradient(white, gray);
+}
+
+li {
+  float: left;
+  display: inline;
+  margin: 2px;  
+  padding-left: 16px;
+
+}
+
+li a {
+  display: block;
+  color: black;
+  font-size: 17px;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+}
+
+li:nth-child(1) {
+  border-right: solid 4px white;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+li:nth-child(2) {
+  border-right: solid 4px white;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+li:nth-child(3) {
+  border-right: solid 4px white;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+li:nth-child(4) {
+  border-right: solid 4px white;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+
+
+

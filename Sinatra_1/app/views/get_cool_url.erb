@@ -1,0 +1,6 @@
+  <h1>All Mesaages</h1>
+  <% @messages.each_with_index do |message, index| %>
+  <p><%= index + 1 %>. <a href="/cool_url/<%= message.id %>"><%= message.input %></a></p>
+  <% end %>
+
+  <a href="/">Home</a>

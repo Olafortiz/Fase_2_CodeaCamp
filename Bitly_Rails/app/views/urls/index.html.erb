@@ -1,0 +1,19 @@
+ <h1>Bienvenido a bitly pirata!</h1>
+ <%= link_to "New", urls_new_path(@url) %>
+<div class="urls">
+  <table>
+    <tr>
+      <th>Long Url</th>
+      <th>Short Url</th>
+    </tr>
+    <tr>
+  <% @urls.each do |url| %>
+      <td><%= url.long_url %></td>
+      <td>
+<%= link_to "#{url.short_url}", "/urls/#{url.id}/#{url.short_url}" %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+  

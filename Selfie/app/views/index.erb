@@ -1,0 +1,17 @@
+<h1>Selfie</h1>
+
+<% if @photos %>
+  <% @photos.each do |photo|  %>
+    <div> 
+      <img src="<%= photo.photo_url(:thumb) %>">
+    </div>
+  <% end %>
+<% end %>
+
+<p> You can register here <p>
+<a class='button' href="/users/log_in">Log in</a>
+<p> Log in if you are already registered <p>
+<a class='button' href="/users/sign_in">Sign in</a>
+<br>
+
+  

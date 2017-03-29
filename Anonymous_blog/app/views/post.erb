@@ -1,0 +1,24 @@
+<h1>Posts</h1>
+<% @post %>
+<p><%= @post.title %></p>
+<p><%= @post.body %></p>
+<p><%= @post.author %></p>
+<p><%= @post.updated_at %></p>
+
+ldsfjbjksdb
+
+<form action="/update_entry" method="post">
+  <p>Update post by title</p>
+  <input type="text" name="title" value="<%=@post.title%>">
+  <br>
+  <p>Update Title</p>
+  <input type="text" name="new_title" value="<%=@post.title%>">
+  <br>
+  <p>Update Body</p>
+  <input type="text" name="new_body" value="<%=@post.body%>">
+  <br>
+  <input type="submit" value="Update">
+  <br>
+</form>
+
+<a href='/'>home</a>

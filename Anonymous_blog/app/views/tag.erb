@@ -1,0 +1,15 @@
+<h3>Here are the results for tag "<%= @tag %>"</h3>
+  <% if @posts %>
+    <% @posts.each do |post| %>
+      <p><%= post.title %></p>
+      <p><%= post.body %></p>
+      <p><%= post.author %></p>
+      <p><%= post.updated_at %></p>
+    <% end %>
+  <% else %>
+    <p>Tag doesn't exist</p><!--  -->
+  <% end %>
+
+  <a href='/'>home</a>
+
+  

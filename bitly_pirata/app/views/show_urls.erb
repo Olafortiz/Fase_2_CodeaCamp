@@ -1,0 +1,28 @@
+<h2>Las ultimas urls que ingresaste son:</h2>
+<br>
+<% if @database.empty? %>
+  <h3>No hay nada</h3>
+<% else %>
+<table class="fixed">
+  <thead>
+    <tr style="border-bottom:1px solid black;">
+      <th style="padding:5px;">Unshortened links</th>
+      <th style="padding:5px;border-left:1px solid black;">Shortened links</th>
+      <th style="padding:5px;border-left:1px solid black;">Count</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @database.each do |urls| %>
+    <tr style="border-bottom:1px solid black;">
+      <td style="fixed"><%= urls.long_url %></td>
+      <% short = urls.short_url %>
+      <td><a href="<%= short %>"><%= "http://ro.ro/" + short %></a></td>
+      <td><%= urls.click_count %></td>     
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
+
+
+

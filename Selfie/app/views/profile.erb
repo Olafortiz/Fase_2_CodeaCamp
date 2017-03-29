@@ -1,0 +1,46 @@
+
+<ul>
+  
+  <li class="bar">
+  <a class="nav" href="/log_out">Log out</a>
+  </li>
+  <li class="bar">
+  <a class="nav" href="/delete/<%=@user.id%>">Delete your account</a>
+  </li>
+  <li class="bar">  
+  <a class="nav" href="/users/<%=@user.id%>/update">Update account</a>
+  </li>
+  
+</ul>
+
+
+<h1><%=@user.name%></h1> 
+<br>
+<br>
+<p>You can load pictures below</p>
+<form method="post" enctype='multipart/form-data' action="/upload">
+  
+  <input type='file' name='photo[photo]'>
+  <br/>
+  <input type='submit' value='Upload!'>
+</form>
+
+<% if @photos  %>
+  <form method="post" action="/delete/image">
+    <% @photos.each do |photo| %>
+      <div> 
+        <ul> 
+
+          <li><input type="checkbox" name="image" value="<%= photo.id %>"><img src="<%= photo.photo_url(:thumb) %>"></li>
+          
+        </ul>
+      </div>
+    <input type='submit' value='Delete Image!'>
+    <% end %>
+  </form> 
+<% end %>
+
+
+
+
+

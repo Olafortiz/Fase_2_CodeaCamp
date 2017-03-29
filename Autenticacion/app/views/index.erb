@@ -1,0 +1,22 @@
+<h1>All users!</h1>
+<br>
+<% if @polls.blank? %>
+  <p> There are not polls yet </p>
+<% else %>
+  <% @polls.each do |poll| %>
+  <a href='/show_poll/<%= poll.id %>'><%= poll.poll_name %></a>
+  <% end %>
+<% end %>
+<% if @user %>
+<br>
+<a class='button' href="/users_home/<%=@user.id%>">Profile</a>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<a class='button' href="/users/sign_in">Sign in</a>
+
+<a class='button' href="/users/log_in">Log in</a>
+
+  

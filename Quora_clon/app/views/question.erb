@@ -1,0 +1,35 @@
+<h2><%= @question.body %></h2>
+<% if @question.answers.empty? %>
+  <p> No answers yet </p>
+  <% else %>
+  <h3>Answers: </h3>
+  <% questions = @question.answers.sort%>
+  <% questions.each do |ans| %>
+
+    <p id="ans"><%= ans.answer_body %></p>
+    <% if ans.votes.blank? %>
+      <p> No votes yet </p>
+      <input type="hidden" name="question_id" value="<%= @question.id %>">
+      <input type="hidden" name="user_id" value="<%= ans.user_id %>">
+      <a class="btn" href="/answer/like/<%= @user.id %>/<%= ans.id %>">Like</a>
+      <% else %>
+      <p>Votes: <%= ans.votes.to_i %> </p>
+      
+      <input type="hidden" name="question_id" value="<%= @question.id %>">
+      <input type="hidden" name="answer_id" value="<%= ans.id %>">
+      <a class="btn" href="/answer/like/<%= @user.id %>/<%= @question.id %>/<%= ans.id %>">Like</a>
+    <% end %>
+  <% end %>
+<% end %>
+<form id="question_box" action='/answer' method="post">
+<br>
+<input id='box' type="text" name="answer">
+<input type="hidden" name="question_id" value="<%= @question.id %>">
+<br>
+<input type="submit" value="Answer">
+</form>
+<br>
+
+ <a href='/users_home/<%= @user.id %>'>User home</a>
+ <br>
+ <a href="/">Home</a>
